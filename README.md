@@ -33,3 +33,5 @@ func main() {
   // ... use listener
 }
 ```
+
+The listener will close inmediatly after receiving SIGINT or SIGTERM and executing all the provided callbacks.
