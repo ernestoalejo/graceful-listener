@@ -25,7 +25,7 @@ import (
 )
 
 func main() {
-  listener, err := graceful.NewGracefulListener("localhost:3000")
+  listener, err := graceful.NewListener("localhost:3000")
   if err != nil {
     log.Fatal(err)
   }

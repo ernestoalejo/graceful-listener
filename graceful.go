@@ -11,10 +11,10 @@ import (
 // before closing the listener.
 type ShutdownCallback func()
 
-// NewGracefulListener creates a new listener that will close itself gracefully after
+// NewListener creates a new listener that will close itself gracefully after
 // Ctrl+C is pressed without leaving clients behind. It will run all callbacks before
 // closing the listener.
-func NewGracefulListener(address string, callbacks ...ShutdownCallback) (net.Listener, error) {
+func NewListener(address string, callbacks ...ShutdownCallback) (net.Listener, error) {
 	listener, err := net.Listen("tcp", address)
 	if err != nil {
 		return nil, err
